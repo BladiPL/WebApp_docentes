@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Inscripción</title>
+  <link rel="stylesheet" href="styleformularios.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  
+</head>
+<body>
+  <header>
+    <img src="vra.png" alt="Logo Vicerrectorado" class="logo-left">
+    <div class="title-container">
+      <h1>UNIVERSIDAD NACIONAL DEL ALTIPLANO PUNO</h1>
+      <h2>VICERRECTORADO ACADÉMICO</h2>
+    </div>
+    <img src="UNAP.png" alt="Logo Universidad" class="logo-right">
+  </header>
+  
+  <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> ATRÁS</a>
+
+  <div class="main-content">
+    <div class="container">
+      <h2>FORMULARIO DE INSCRIPCIÓN</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="dni"><i class="fas fa-id-card"></i> DNI:</label>
+          <input type="text" id="dni" name="dni" required pattern="\d{8}" inputmode="numeric" maxlength="8" title="Por favor ingrese 8 números.">
+          <span class="error-message" id="dni-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="apellidoPaterno"><i class="fas fa-user"></i> Apellido Paterno:</label>
+          <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
+          <span class="error-message" id="Apellido Paterno-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="apellidoMaterno"><i class="fas fa-user"></i> Apellido Materno:</label>
+          <input type="text" id="apellidoMaterno" name="apellidoMaterno" required>
+          <span class="error-message" id="Apellido Materno-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="nombres"><i class="fas fa-user"></i> Nombres:</label>
+          <input type="text" id="nombres" name="nombres" required>
+          <span class="error-message" id="Nombres-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="celular"><i class="fas fa-mobile-alt"></i> Número de celular:</label>
+          <input type="text" id="celular" name="celular" required pattern="\d{9}" inputmode="numeric" maxlength="9" title="Por favor ingrese 9 números.">
+          <span class="error-message" id="celular-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="correoInstitucional"><i class="fas fa-envelope"></i> Correo Institucional:</label>
+          <input type="email" id="correoInstitucional" name="correoInstitucional" required>
+          <span class="error-message" id="correoInstitucional-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="programaEstudios"><i class="fas fa-book"></i> Programa de Estudios:</label>
+          <input type="text" id="programaEstudios" name="programaEstudios" required>
+        </div>
+        <div class="form-group">
+          <label for="escuelaProfesional"><i class="fas fa-school"></i> Escuela Profesional:</label>
+          <input type="text" id="escuelaProfesional" name="escuelaProfesional" required>
+        </div>
+        <div class="form-group">
+          <label for="opciones"><i class="fas fa-school"></i> Área:</label>
+          <select id="opciones" name="opciones" required>
+            <option value="">Selecciona su Área</option>
+            <option value="opcion1">Ingeniería</option>
+            <option value="opcion2">Biomédicas</option>
+            <option value="opcion3">Sociales</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="docente"><i class="fas fa-user"></i> Usted es Docente:</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="intereses" value="interes1"> Contratado</label><br>
+            <label><input type="checkbox" name="intereses" value="interes2"> Nombrado</label>
+          </div>
+        </div>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
+      </form>
+    </div>
+    <div class="image-container">
+      <img src="flyres.png" alt="Descripción de la imagen">
+    </div>
+  </div>
+  <footer>
+    <p> Plataforma de Cursos de Talleres para Docentes<br> Dirección de Gestión Academica<br>  Oficina de Vicerrectorado<br> Universidad Nacional del Altiplano Puno - 2024</p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>

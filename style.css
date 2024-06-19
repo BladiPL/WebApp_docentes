@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(10, 9, 9, 0.354), rgba(253, 252, 252, 0.5)), url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5;
+}
+
+header, footer {
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(39, 71, 108, 0.947);
+  color: #f8f1f1;
+}
+
+.header-text {
+  text-align: center;
+}
+
+header h1, header h2, footer p {
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+.logo-left, .logo-right {
+  width: 80px; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+  position: absolute;
+}
+
+.logo-left {
+  left: 20px;
+}
+
+.logo-right {
+  right: 20px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center; /* Centra las cajas horizontalmente */
+  align-items: flex-start;
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 30px; /* Añade espacio entre el contenido principal y el pie de página */
+}
+
+.box {
+  background-color: rgba(70, 124, 185, 0.479);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.931);
+  width: 30%; /* Ajusta el tamaño de las cajas según sea necesario */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px; /* Añade un pequeño espacio de separación entre las cajas */
+  height: 500px; /* Hace las cajas más largas */
+}
+
+.box-image {
+  width: 90%; /* Ajusta la anchura de la imagen para que sea más pequeña que la caja */
+  height: 90%; /* Ajusta la altura de la imagen para que sea más pequeña que la caja */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 30px; /* Ajusta este valor para cambiar el espacio entre la imagen y el botón */
+}
+
+.area-button {
+  padding: 10px;
+  background-color: #f0dd12;
+  color: rgb(12, 11, 11);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.area-button:hover {
+  background-color: #31a11f;
+}
+
+footer p {
+  text-align: center;
+}
