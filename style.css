@@ -91,6 +91,7 @@ header h1, header h2, footer p {
 
 footer p {
   text-align: center;
+<<<<<<< HEAD
 }
 
 /* Media queries para la responsividad */
@@ -129,3 +130,6 @@ footer p {
     padding: 10px;
   }
 }
+=======
+}
+>>>>>>> dfcd62f1b623adedc2a9906d0041c2eb5ea401ae
