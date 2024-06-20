@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(rgba(10, 9, 9, 0.354), rgba(253, 252, 252, 0.5)), url('fondo.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(10, 9, 9, 0.354), rgba(253, 252, 252, 0.5)), url('assets/img/fondo.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@ header h1, header h2, footer p {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.931);
   width: 100%;
   max-width: 500px; /* Ajusta el tamaño del contenedor */
-  height: 855px; /* Ajusta la altura del contenedor */
+  height: 1005px; /* Ajusta la altura del contenedor */
 }
 
 .image-container img {
