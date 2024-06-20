@@ -44,8 +44,8 @@ header h1, header h2, footer p {
 
 .main-content {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column; /* Cambiar a columna para apilar elementos en pantallas pequeñas */
+  align-items: center;
   width: 80%;
   margin-top: 30px;
   margin-bottom: 30px; /* Añade espacio entre el contenido principal y el pie de página */
@@ -60,24 +60,24 @@ header h1, header h2, footer p {
   max-width: 400px;
   margin-right: 40px;
 }
-/*Para la imagen de flyers*/
+
 .image-container {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(70, 124, 185, 0.479);
-  padding: 20px; /* Reduce el padding para ajustar el tamaño del contenedor */
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.931);
   width: 100%;
-  max-width: 500px; /* Ajusta el tamaño del contenedor */
-  height: 1005px; /* Ajusta la altura del contenedor */
+  max-width: 500px;
+  height: 500px; /* Ajusta la altura del contenedor */
 }
 
 .image-container img {
-  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-  height: 100%; /* La imagen ocupará toda la altura del contenedor */
-  object-fit: cover; /* Ajusta la imagen para que ocupe todo el contenedor sin deformarse */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -96,7 +96,7 @@ h2 {
   align-items: center;
   margin-bottom: 3px;
   color: #030202;
-  font-weight: bold; /* Poner en negrita las etiquetas */
+  font-weight: bold;
 }
 
 .form-group label i {
@@ -141,7 +141,6 @@ footer p {
   text-align: center;
 }
 
-/* Para el boton de atras */
 .back-button {
   position: absolute;
   top: 20px;
@@ -164,4 +163,45 @@ footer p {
 .back-button:hover {
   background-color: #baba13d8;
   color: white;
+}
+
+/* Media queries para la responsividad */
+@media (max-width: 768px) {
+  header h1, h2 {
+    font-size: smaller;
+  }
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container, .image-container {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  .image-container {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-left, .logo-right {
+    width: 60px;
+  }
+
+  header, footer {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .logo-left, .logo-right {
+    position: static;
+    margin: 10px 0;
+  }
+
+  .container, .image-container {
+    padding: 10px;
+  }
 }
