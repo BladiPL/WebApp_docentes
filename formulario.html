@@ -11,15 +11,15 @@
 </head>
 <body>
   <header>
-    <img src="vra.png" alt="Logo Vicerrectorado" class="logo-left">
+    <img src="assets/img/vra.png" alt="Logo Vicerrectorado" class="logo-left">
     <div class="title-container">
       <h1>UNIVERSIDAD NACIONAL DEL ALTIPLANO PUNO</h1>
       <h2>VICERRECTORADO ACADÉMICO</h2>
     </div>
-    <img src="UNAP.png" alt="Logo Universidad" class="logo-right">
+    <img src="assets/img/UNAP.png" alt="Logo Universidad" class="logo-right">
   </header>
   
-  <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> ATRÁS</a>
+  <a href="/index.html" class="back-button"><i class="fas fa-arrow-left"></i> ATRÁS</a>
 
   <div class="main-content">
     <div class="container">
@@ -56,34 +56,37 @@
           <span class="error-message" id="correoInstitucional-error"></span>
         </div>
         <div class="form-group">
-          <label for="programaEstudios"><i class="fas fa-book"></i> Programa de Estudios:</label>
-          <input type="text" id="programaEstudios" name="programaEstudios" required>
+          <label for="Facultad"><i class="fas fa-school"></i> Facultad:</label>
+          <input type="text" id="Facultad" name="Facultad" required>
         </div>
         <div class="form-group">
           <label for="escuelaProfesional"><i class="fas fa-school"></i> Escuela Profesional:</label>
           <input type="text" id="escuelaProfesional" name="escuelaProfesional" required>
         </div>
         <div class="form-group">
-          <label for="opciones"><i class="fas fa-school"></i> Área:</label>
-          <select id="opciones" name="opciones" required>
-            <option value="">Selecciona su Área</option>
-            <option value="opcion1">Ingeniería</option>
-            <option value="opcion2">Biomédicas</option>
-            <option value="opcion3">Sociales</option>
-          </select>
+          <label for="programaEstudios"><i class="fas fa-book"></i> Programa de Estudios:</label>
+          <input type="text" id="programaEstudios" name="programaEstudios" required>
         </div>
         <div class="form-group">
-          <label for="docente"><i class="fas fa-user"></i> Usted es Docente:</label>
+          <label for="docente"><i class="fas fa-user"></i> Condición de Contrato:</label>
           <div class="checkbox-group">
             <label><input type="checkbox" name="intereses" value="interes1"> Contratado</label><br>
             <label><input type="checkbox" name="intereses" value="interes2"> Nombrado</label>
+          </div><br>
+          <div class="form-group">
+            <label for="Grado Académico"><i class="fas fa-school"></i> Grado Académico:</label>
+            <input type="text" id="Grado Académico" name="Grado Académico" required>
+          </div>
+          <div class="form-group">
+            <label for="Grado Académico"><i class="fas fa-school"></i> Curso que dicta:</label>
+            <input type="text" id="Grado Académico" name="Grado Académico" required>
           </div>
         </div>
         <button type="submit"><i class="fas fa-paper-plane"></i> Enviar</button>
       </form>
     </div>
     <div class="image-container">
-      <img src="flyres.png" alt="Descripción de la imagen">
+      <img src="assets/img/flyres.png" alt="Descripción de la imagen">
     </div>
   </div>
   <footer>

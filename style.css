@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(rgba(10, 9, 9, 0.354), rgba(253, 252, 252, 0.5)), url('fondo.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(10, 9, 9, 0.354), rgba(253, 252, 252, 0.5)), url('assets/img/fondo.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
