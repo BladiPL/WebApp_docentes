@@ -143,14 +143,14 @@ header {
 }
 
 
-/* Estilo para el formulario */
+/* ---------------------Estilo para el formulario ----------------*/
 
 .formulario {
     width: 60%;
     /* Ancho del formulario */
     padding: 1rem;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(20, 64, 75, 0.7);
 }
 
 .formulario form {
@@ -214,7 +214,7 @@ footer {
     padding: 0.2rem;
 }
 
-/* Estilo para el encuesta */
+/* ---------------------------Estilo para el encuesta ------------------------------*/
 
 /* styles.css */
 
@@ -228,7 +228,7 @@ section {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Sombra */
+    box-shadow: 0 0 10px hsla(204.34, 45%, 46%, 0.9); /* Sombra */
 }
 
 
