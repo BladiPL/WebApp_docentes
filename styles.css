@@ -1,0 +1,344 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo y la estructura general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e4ebf0; /* Color de fondo de la página */
+}
+
+/*
+div {
+    border: solid;
+    border-color: black;
+}*/
+
+/*BARRA DE NAVEGACION */
+.navbar-nav .nav-link {
+    transition: color 0.3s ease; 
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ff9900; 
+  }
+
+  
+.container {
+    width: 90%;
+    margin: 0 auto;
+    /* Centra el contenedor en la página */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Mínimo alto de la vista del dispositivo */
+}
+
+header {
+    background-color: #1b1b32;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+}
+
+.logo-left img {
+    width: 70px;
+    /* Tamaño específico de los logos */
+    height: auto;
+    margin: 0 10px;
+    /* Espacio entre los logos y el texto */
+}
+
+.logo-right img {
+    width: 60px;
+    /* Tamaño específico de los logos */
+    height: auto;
+    margin: 0 10px;
+    /* Espacio entre los logos y el texto */
+}
+
+.title-container {
+    text-align: center;
+    flex-grow: 1;
+    /* Para que ocupe todo el espacio disponible */
+}
+
+.logo {
+    max-width: 100%;
+    /* Ajusta el tamaño máximo del logo al contenedor */
+    height: auto;
+}
+
+.descripcion {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para el index areas de inscripcion */
+.box {
+    background-color: rgba(194, 214, 236, 0.479);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.931);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 500px;
+}
+
+.box-image-container {
+    width: 100%;
+    height: 95%; /* Ajusta esta altura según sea necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.box-button-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.area-button {
+    padding: 10px;
+    background-color: #f0dd12;
+    color: rgb(12, 11, 11);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.area-button:hover {
+    background-color: #31a11f;
+}
+
+
+/* Estilo para el formulario */
+
+.formulario {
+    width: 60%;
+    /* Ancho del formulario */
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin-bottom: 0.5rem;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.formulario button {
+    padding: 0.75rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.imagen {
+    width: 50%;
+    /* Ancho del contenedor de la imagen */
+    text-align: center;
+    /* Centra la imagen horizontalmente */
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 400px;
+    /* Limita la altura máxima de la imagen */
+    max-width: 400px;
+    /* Limita el ancho máximo de la imagen */
+}
+
+.atras {
+    display: grid;
+    place-items: center;
+    margin: 20px 0; /* Ajusta el margen según sea necesario */
+}
+
+footer {
+    margin-top: auto;
+    /* Empuja el pie de página hasta la parte inferior */
+    background-color: #1b1b32;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+/* Estilo para el encuesta */
+
+/* styles.css */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Sombra */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f0f0f0;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin: 0 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+button {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .box {
+        width: 45%; /* Adjust width for tablets */
+        height: auto; /* Let height adjust automatically */
+        padding: 15px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+    }
+
+    .formulario,
+    .imagen {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .formulario {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .imagen {
+        margin-left: 0;
+    }
+    .box {
+        width: 100%; 
+        height: auto; 
+        margin: 10px 0; 
+        padding: 10px; 
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+    header,
+    footer {
+        padding: 0.5rem 0;
+    }
+
+    .formulario label {
+        margin: 0.25rem 0;
+    }
+
+    .formulario input,
+    .formulario textarea,
+    .formulario button {
+        padding: 0.25rem;
+    }
+
+    .contenido {
+        margin: 1rem 0;
+    }
+}
