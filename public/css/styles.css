@@ -171,6 +171,15 @@ header {
     font-size: 1rem;
 }
 
+.radio-group {
+    display: flex; /* Utilizamos flexbox para alinear elementos en una sola línea */
+    align-items: center; /* Centramos verticalmente los elementos */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px; /* Margen derecho para separar los radios */
+}
+
 .formulario button {
     padding: 0.75rem;
     background-color: #333;

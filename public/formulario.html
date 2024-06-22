@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripción</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -15,19 +15,19 @@
     <div class="container">
         <header>
             <div class="logo-left">
-                <img src="assets/img/vra.png" alt="Logo Vicerrectorado">
+                <img src="/img/vra.png" alt="Logo Vicerrectorado">
             </div>
             <div class="title-container">
                 <h3>UNIVERSIDAD NACIONAL DEL ALTIPLANO PUNO</h3>
                 <h4>VICERRECTORADO ACADÉMICO</h4>
             </div>
             <div class="logo-right">
-                <img src="assets/img/UNAP.png" alt="Logo Universidad">
+                <img src="/img/UNAP.png" alt="Logo Universidad">
             </div>
         </header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/index.html">Inicio</a>
+                <a class="navbar-brand" href="/">Inicio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -56,44 +56,54 @@
         </div>
         <div class="contenido">
             <div class="formulario">
-                <form action="/submit" method="POST">
+                <form id="registrationForm" action="/submit" method="POST">
                     <label for="dni"><i class="fas fa-id-card"></i> DNI :</label>
                     <input type="text" id="dni" name="dni" pattern="\d{8}" inputmode="numeric" maxlength="8"
                         title="Por favor ingrese 8 números." required>
+
                     <label for="apellidos"><i class="fas fa-user"></i> Apellidos:</label>
                     <input type="text" id="apellidos" name="apellidos" required>
+
                     <label for="nombres"><i class="fas fa-user"></i> Nombres:</label>
                     <input type="text" id="nombres" name="nombres" required>
+
                     <label for="Facultad"><i class="fas fa-school"></i> Facultad:</label>
                     <input type="text" id="Facultad" name="Facultad" required>
+
                     <label for="escuelaProfesional"><i class="fas fa-school"></i> Escuela Profesional:</label>
                     <input type="text" id="escuelaProfesional" name="escuelaProfesional" required>
+
                     <label for="programaEstudios"><i class="fas fa-school"></i> Programa de Estudios:</label>
                     <input type="text" id="programaEstudios" name="programaEstudios" required>
+
                     <label for="correoInstitucional"><i class="fas fa-envelope"></i> Correo Institucional:</label>
                     <input type="email" id="correoInstitucional" name="correoInstitucional" required>
+
                     <label for="celular"><i class="fas fa-mobile-alt"></i> Número de celular:</label>
                     <input type="text" id="celular" name="celular" required pattern="\d{9}" inputmode="numeric"
                         maxlength="9" title="Por favor ingrese 9 números.">
-                    <label for="docente"><i class="fa fa-file-text"></i> Condición de Contrato:</label>
+
+                    <label><i class="fa fa-file-text"></i> Condición de Contrato:</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" name="intereses" value="interes1"> Contratado</label><br>
-                        <label><input type="checkbox" name="intereses" value="interes2"> Nombrado</label>
+                        <label><input type="checkbox" name="contrato" value="Contratado"> Contratado</label><br>
+                        <label><input type="checkbox" name="contrato" value="Nombrado"> Nombrado</label>
                     </div>
-                    <label for="Grado Académico"><i class="fa fa-graduation-cap"></i>Grado Académico:</label>
-                    <input type="text" id="Grado Académico" name="Grado Académico" required>
-                    <label for="Grado Académico"><i class="fas fa-book"></i> Curso que dicta:</label>
-                    <input type="text" id="Grado Académico" name="Grado Académico" required>
+
+                    <label for="gradoAcademico"><i class="fa fa-graduation-cap"></i> Grado Académico:</label>
+                    <input type="text" id="gradoAcademico" name="gradoAcademico" required>
+
+                    <label for="cursoDicta"><i class="fas fa-book"></i> Curso que dicta:</label>
+                    <input type="text" id="cursoDicta" name="cursoDicta" required>
 
                     <button type="submit">INSCRIBIRSE</button>
                 </form>
             </div>
             <div class="imagen">
-                <img src="/assets/img/flyres.png" alt="Flyer">
+                <img src="/img/flyres.png" alt="Flyer">
             </div>
         </div>
         <div class="atras">
-            <a href="/index.html" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">ATRAS</a>
+            <a href="/" class="btn btn-warning btn-lg active" role="button" aria-pressed="true">ATRAS</a>
         </div>
         <footer>
             <p>Dirección de Gestión Academica &copy Copyright 2024<br>Universida Nacional del Altiplano - Puno</p>
@@ -102,6 +112,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="/consumenapi.js"></script>
 </body>
 
 </html>
