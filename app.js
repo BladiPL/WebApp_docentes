@@ -35,11 +35,11 @@ app.get('/', (req, res) => {
 
 // Ruta para manejar el envío del formulario
 app.post('/submit', (req, res) => {
-    const { dni, apellidos, nombres, Facultad, escuelaProfesional, programaEstudios, correoInstitucional, celular, contrato, gradoAcademico, cursoDicta } = req.body;
+    const { dni, apellidos, nombres, Facultad, escuelaProfesional, programaEstudios, correoInstitucional, celular, contrato, gradoAcademico } = req.body;
 
     // Ejemplo de cómo podrías insertar los datos en la base de datos
-    const sql = 'INSERT INTO inscripciones (dni, apellidos, nombres, facultad, escuela, programa, correo, celular, contrato, grado_ac, curso) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
-    db.query(sql, [dni, apellidos, nombres, Facultad, escuelaProfesional, programaEstudios, correoInstitucional, celular, contrato, gradoAcademico, cursoDicta], (err, result) => {
+    const sql = 'INSERT INTO inscripciones (dni, apellidos, nombres, facultad, escuela, programa, correo, celular, contrato, grado_ac) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    db.query(sql, [dni, apellidos, nombres, Facultad, escuelaProfesional, programaEstudios, correoInstitucional, celular, contrato, gradoAcademico], (err, result) => {
         if (err) {
             console.error('Error al insertar los datos:', err);
             res.status(500).json({ error: 'Error al insertar los datos' });
