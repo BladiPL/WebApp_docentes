@@ -171,15 +171,6 @@ header {
     font-size: 1rem;
 }
 
-.radio-group {
-    display: flex; /* Utilizamos flexbox para alinear elementos en una sola línea */
-    align-items: center; /* Centramos verticalmente los elementos */
-}
-
-.radio-group input[type="radio"] {
-    margin-right: 5px; /* Margen derecho para separar los radios */
-}
-
 .formulario button {
     padding: 0.75rem;
     background-color: #333;
@@ -262,8 +253,17 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="radio"] {
-    margin: 0 5px;
+.select-group {
+    display: flex;
+    align-items: center;
+}
+.select-group label {
+    margin-right: 10px;
+    display: inline-block;
+    width: 200px; /* Ajusta el ancho según sea necesario */
+}
+.select-group select {
+    flex: 1;
 }
 
 textarea {
