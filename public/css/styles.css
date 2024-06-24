@@ -256,8 +256,17 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="radio"] {
-    margin: 0 5px;
+.select-group {
+    display: flex;
+    align-items: center;
+}
+.select-group label {
+    margin-right: 10px;
+    display: inline-block;
+    width: 200px; /* Ajusta el ancho según sea necesario */
+}
+.select-group select {
+    flex: 1;
 }
 
 textarea {
