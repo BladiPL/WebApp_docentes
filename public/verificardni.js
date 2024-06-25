@@ -35,34 +35,37 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 
-    // La función de verificación de DNI sigue igual
+    // La función de verificación de DNI
     document.getElementById("dni").addEventListener("input", verificarDocente);
 
     async function verificarDocente() {
         const dni = document.getElementById('dni').value.trim();
-        if (!dni) return;
+        if (dni.length === 8) {
+            if (!dni) return;
 
-        try {
-            const response = await axios.get(`/verificar-docente/${dni}`);
-            const { docente } = response.data;
+            try {
+                const response = await axios.get(`/verificar-docente/${dni}`);
+                const { docente } = response.data;
 
-            // Actualizar campos de apellidos si se encontró el docente
-            document.getElementById('apellidos').value = docente.apellidos.toUpperCase();
+                // Actualizar campos de apellidos si se encontró el docente
+                document.getElementById('apellidos').value = docente.apellidos.toUpperCase();
 
-            // Mostrar el formulario de la encuesta
-            document.getElementById('dni').setAttribute('readonly', true); // Hacer el campo DNI no editable
-            document.getElementById('nombres_apellidos').style.display = 'block';
-            document.getElementById('formulario_encuesta').style.display = 'block';
-            document.getElementById('button-container').style.display = 'none';
-        } catch (error) {
-            if (error.response && error.response.data && error.response.data.message) {
-                console.error('Error al verificar DNI:', error.response.data.message);
-                alert('Docente no encontrado o error de conexión');
-            } else {
-                console.error('Error inesperado al verificar DNI:', error.message);
-                alert('Error inesperado al verificar DNI');
+                // Mostrar el formulario de la encuesta
+                document.getElementById('dni').setAttribute('readonly', true); // Hacer el campo DNI no editable
+                document.getElementById('nombres_apellidos').style.display = 'block';
+                document.getElementById('formulario_encuesta').style.display = 'block';
+                document.getElementById('button-container').style.display = 'none';
+            } catch (error) {
+                if (error.response && error.response.status === 404) {
+                    console.error('Docente no encontrado:', error.response.data.message);
+                    $('#errorModal').modal('show'); // Mostrar modal de error de docente no encontrado
+                } else {
+                    console.error('Error inesperado al verificar DNI:', error.message);
+                    alert('Error inesperado al verificar DNI');
+                }
             }
         }
+
     }
 });
 
@@ -70,3 +73,4 @@ document.addEventListener('DOMContentLoaded', function () {
 function redirectToHomePage() {
     window.location.href = "/";
 }
+

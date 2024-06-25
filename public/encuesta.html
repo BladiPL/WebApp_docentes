@@ -265,7 +265,28 @@
                         <button type="submit_asistencia">Enviar Asistencia y Encuesta</button>
                     </div>
                 </div>
+                <!-- Modal dni no encontrado-->
+                <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="errorModalLabel">Docente no inscrito</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            usted no se encuentra inscrito, complete primero su inscripcion.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success"
+                                data-bs-dismiss="modal" onclick="redirectToHomePage()">Realizar inscripción</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </form>
+
         </div>
 
         <footer>
@@ -276,6 +297,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- Asegúrate de incluir jQuery antes de tu script -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/verificardni.js"></script>
 </body>
 

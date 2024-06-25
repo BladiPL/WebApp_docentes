@@ -38,41 +38,46 @@ document.addEventListener('DOMContentLoaded', function () {
     // Escuchar cambios en el campo de DNI
     document.getElementById("dni").addEventListener("input", traer);
 
-    function traer() {
+    async function traer() {
         var dni = document.getElementById("dni").value;
 
         // Verificar que el DNI tenga una longitud válida para evitar solicitudes innecesarias
         if (dni.length === 8) {
-            fetch("http://127.0.0.1:8000/docentes/dni=" + dni)
-                .then((res) => {
-                    if (!res.ok) {
-                        throw new Error('Docente no encontrado');
-                    }
-                    return res.json();
-                })
-                .then((data) => {
-                    console.log(data); // Mostrar datos recibidos en la consola
+            try {
+                // Primero verificamos si el DNI está registrado en nuestra base de datos localmente
+                const responseVerificar = await fetch(`/verificar-docente/${dni}`);
+                if (responseVerificar.ok) {
+                    // Si está registrado, mostramos un modal indicando que ya está inscrito
+                    $('#inscritoModal').modal('show');
+                    return; // Terminamos aquí si el DNI está registrado
+                }
 
-                    // Verificar si la respuesta indica que el docente no fue encontrado
-                    if (data.detail && data.detail === 'Docente no encontrado') {
-                        // Mostrar modal de error si el docente no está registrado
-                        $('#errorModal').modal('show');
-                    } else {
-                        // Asignar valores a los campos del formulario
-                        document.getElementById("apellidos").value = data.ap_paterno + " " + data.ap_materno;
-                        document.getElementById("nombres").value = data.nombre;
-                        document.getElementById("Facultad").value = data.Facultad;
-                        document.getElementById("escuelaProfesional").value = data.escuela;
-                        document.getElementById("programaEstudios").value = data.programa;
-                        document.getElementById("correoInstitucional").value = data.correo;
-                        document.getElementById("celular").value = data.celular;
-                    }
-                })
-                .catch((error) => {
-                    // Mostrar mensaje de error en caso de que falle la solicitud
-                    console.error('Error:', error);
-                    $('#errorModal').modal('show'); // Mostrar modal de error general
-                });
+                // Si no está registrado localmente, consultamos a la API principal
+                const response = await fetch(`http://127.0.0.1:8000/docentes/dni=${dni}`);
+                if (!response.ok) {
+                    throw new Error('Docente no encontrado');
+                }
+                const data = await response.json();
+
+                // Verificar si la respuesta indica que el docente no fue encontrado
+                if (data.detail && data.detail === 'Docente no encontrado') {
+                    // Mostrar modal de error si el docente no está registrado
+                    $('#errorModal').modal('show');
+                } else {
+                    // Asignar valores a los campos del formulario
+                    document.getElementById("apellidos").value = data.ap_paterno + " " + data.ap_materno;
+                    document.getElementById("nombres").value = data.nombre;
+                    document.getElementById("Facultad").value = data.Facultad;
+                    document.getElementById("escuelaProfesional").value = data.escuela;
+                    document.getElementById("programaEstudios").value = data.programa;
+                    document.getElementById("correoInstitucional").value = data.correo;
+                    document.getElementById("celular").value = data.celular;
+                }
+            } catch (error) {
+                // Mostrar mensaje de error en caso de que falle la solicitud
+                console.error('Error:', error);
+                $('#errorModal').modal('show'); // Mostrar modal de error general
+            }
         } else {
             // Limpiar los campos si el DNI no tiene una longitud válida
             document.getElementById("apellidos").value = "";
