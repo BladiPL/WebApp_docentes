@@ -84,7 +84,7 @@
                         maxlength="9" title="Por favor ingrese 9 números.">
                     <div class="select-group">
                         <label><i class="fa fa-file-text"></i> Condición de Contrato:</label>
-                        <select name="contrato" id="contrato">
+                        <select name="contrato" id="contrato" required>
                             <option value="" disabled selected>Usted es docente</option>
                             <option value="1">Contratado</option>
                             <option value="2">Nombrado</option>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="select-group">
                         <label for="gradoAcademico"><i class="fa fa-graduation-cap"></i> Grado Académico:</label>
-                        <select id="gradoAcademico" name="gradoAcademico">
+                        <select id="gradoAcademico" name="gradoAcademico" required>
                             <option value="" disabled selected>Seleccione su grado académico</option>
                             <option value="1">Doctor</option>
                             <option value="2">Magister</option>
@@ -100,7 +100,22 @@
                             <option value="4">Licenciado</option>
                         </select>
                     </div>
-
+                    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Mensaje</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="modal-message"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="redirectToHomePage()">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <br>
                     <button type="submit">INSCRIBIRSE</button>
                 </form>

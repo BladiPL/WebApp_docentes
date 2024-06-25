@@ -193,7 +193,7 @@ header {
     height: auto;
     border: 1px solid #ccc;
     border-radius: 4px;
-    max-height: 400px;
+    max-height: 100%;
     /* Limita la altura máxima de la imagen */
     max-width: 400px;
     /* Limita el ancho máximo de la imagen */

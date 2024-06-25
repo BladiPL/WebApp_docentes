@@ -24,8 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(result => {
             console.log('Success:', result);
-            alert(result.message); // Mostrar mensaje de éxito del servidor
-            form.reset(); // Opcional: Limpiar el formulario después del envío exitoso
+            document.getElementById('modal-message').textContent = result.message;
+            var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+            myModal.show();
+            form.reset();
         })
         .catch(error => {
             console.error('Error:', error);
@@ -72,3 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+function redirectToHomePage() {
+    window.location.href = "/";
+}
